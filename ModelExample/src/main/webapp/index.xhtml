@@ -7,8 +7,26 @@
     </h:head>
     <h:body>
         <h:form>
-            <h:commandButton value="View Patient" action="#{patientController.toViewPatients()}"></h:commandButton>
-            <h:commandButton value="Add New Patient" action="#{patientController.toAddPatient()}"></h:commandButton>
+            <div class="bed-container">
+                <div class="left-container">
+                    <div class="nurse">
+                        <h1>Home</h1>
+                    </div>
+                    <div class="doctor">
+                        <h1><h:commandButton value="View Patient" action="#{patientController.toViewPatients()}"></h:commandButton></h1>
+                    </div>
+                    <div class="billings">
+                        <h1><h:commandButton value="Add New Patient" action="#{patientController.toAddPatient()}"></h:commandButton></h1>
+                    </div>
+            
+                </div>
+                <div class="right-container">
+                    <div class="top-head">
+                        <h2>Home</h2>
+                    </div>
+                    <h1>NHICH patients module</h1>
+                </div>
+            </div>
         </h:form>
     </h:body>
 </html>
