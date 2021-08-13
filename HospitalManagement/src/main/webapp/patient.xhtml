@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Add Patient</title>
+        <link rel="stylesheet" href="./patient.css"></link>
+    </h:head>
+    <h:body>
+        <h:form>
+            <div class="home-container">
+                <div class="left-container">
+                    <div class="home">
+                        <h:commandButton value="Home" action="#{patientController.toHomePage()}"></h:commandButton>
+                    </div>
+                    <div class="add-patient">
+                        <h:commandButton value="Add Patient" action="#{patientController.toAddNewPatient()}"></h:commandButton>
+                    </div>
+                    <div class="veiw-patients">
+                        <h:commandButton value="View Patients" action="#{patientController.toViewPatients()}"></h:commandButton>
+                    </div>
+            
+                </div>
+                <div class="right-container">
+                    <div class="top-head">
+                        <h2>Add Patient</h2>
+                    </div>
+                    <div class="patient-content">
+                        <div class="patient-details">
+                            <div class="left-side">
+                                <h1 class="patient-register">Add Patient</h1>
+                            </div>
+                            <div class="right-side">
+                                <form>
+                                    <h1>Id</h1>
+                                    <input type="text" required placeholder="id" />
+                                    <h1>Name</h1>
+                                    <input type="text" required placeholder="name" />
+                                    <h1>comment</h1>
+                                    <input type="text" required placeholder="first name" />
+                                    <button type="submit" class="send">Save</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </h:form>
+    </h:body>
+</html>
+

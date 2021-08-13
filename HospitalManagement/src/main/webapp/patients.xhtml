@@ -3,21 +3,21 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html">
     <h:head>
-        <title>Hospital Management System</title>
-        <link rel="stylesheet" href="./index.css"></link>
+        <title>View Patient</title>
+        <link rel="stylesheet" href="./patients.css"></link>
     </h:head>
     <h:body>
         <h:form>
             <div class="home-container">
                 <div class="left-container">
                     <div class="home">
-                        <h1>Home</h1>
+                        <h:commandButton value="Home" action="#{patientController.toHomePage()}"></h:commandButton>
                     </div>
-                    <div class="view-patients">
-                        <h1><h:commandButton value="View Patient" action="#{patientController.toViewPatients()}"></h:commandButton></h1>
+                    <div class="add-patient">
+                        <h:commandButton value="Add Patient" action="#{patientController.toAddNewPatient()}"></h:commandButton>
                     </div>
-                    <div class="Add-patient">
-                        <h1><h:commandButton value="Add New Patient" action="#{patientController.toAddPatient()}"></h:commandButton></h1>
+                    <div class="veiw-patients">
+                        <h:commandButton value="View Patients" action="#{patientController.toViewPatients()}"></h:commandButton>
                     </div>
             
                 </div>
@@ -25,7 +25,7 @@
                     <div class="top-head">
                         <h2>Home</h2>
                     </div>
-                    <h1>NHICH patients module</h1>
+                    <h1>View Patient</h1>
                 </div>
             </div>
         </h:form>
