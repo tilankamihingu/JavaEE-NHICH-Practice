@@ -10,11 +10,13 @@ package model;
  * @author Click
  */
 public class Patient {
-    Long id;
-    String name;
-    Integer age;
-    String adress;
-
+   private Long id;
+   private String name;
+   private Integer age;
+   private String adress;
+   private String nic;
+   
+   
     public Long getId() {
         return id;
     }
@@ -45,6 +47,14 @@ public class Patient {
 
     public void setAdress(String adress) {
         this.adress = adress;
+    }
+
+    public String getNic() {
+        return nic;
+    }
+
+    public void setNic(String nic) {
+        this.nic = nic;
     }
     
     

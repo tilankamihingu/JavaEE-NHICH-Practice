@@ -1,7 +1,8 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
         <title>View Patient</title>
         <link rel="stylesheet" href="./patients.css"></link>
@@ -25,7 +26,32 @@
                     <div class="top-head">
                         <h2>Home</h2>
                     </div>
-                    <h1>View Patient</h1>
+                    <div class="patient-list">
+                        <div class="patient-table">
+                            <h:dataTable value="#{patientController.patients}" var="p">
+                                <h:column class="col">
+                                    <h:outputLabel value="#{p.id}"></h:outputLabel>
+                                </h:column>
+                                <h:column class="col">
+                                    <h:outputLabel value="#{p.name}"></h:outputLabel>
+                                </h:column>
+                                <h:column class="col">
+                                    <h:outputLabel value="#{p.age}"></h:outputLabel>
+                                </h:column>
+                                <h:column class="col">
+                                    <h:outputLabel value="#{p.adress}"></h:outputLabel>
+                                </h:column>
+                                <h:column class="col">
+                                    <h:outputLabel value="#{p.nic}"></h:outputLabel>
+                                </h:column>
+                                <h:column class="col">
+                                    <h:commandButton value="Edit" class="edit" action="#{patientController.toEditPatient()}">
+                                        <f:setPropertyActionListener value="#{p}" target="#{patientController.currentPatient}"></f:setPropertyActionListener>
+                                    </h:commandButton>
+                                </h:column>
+                            </h:dataTable>                          
+                        </div>
+                    </div>
                 </div>
             </div>
         </h:form>

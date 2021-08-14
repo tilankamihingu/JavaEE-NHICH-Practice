@@ -31,15 +31,20 @@
                                 <h1 class="patient-register">Add Patient</h1>
                             </div>
                             <div class="right-side">
-                                <form>
-                                    <h1>Id</h1>
-                                    <input type="text" required placeholder="id" />
-                                    <h1>Name</h1>
-                                    <input type="text" required placeholder="name" />
-                                    <h1>comment</h1>
-                                    <input type="text" required placeholder="first name" />
-                                    <button type="submit" class="send">Save</button>
-                                </form>
+                       
+                                            <h2>Id</h2>
+                                            <h:outputLabel value="#{patientController.currentPatient.id}"></h:outputLabel>
+                                            <h2>Name</h2>
+                                            <h:inputText value="#{patientController.currentPatient.name}" ></h:inputText>
+                                            <h2>Age</h2>
+                                            <h:inputText value="#{patientController.currentPatient.age}" ></h:inputText>
+                                            <h2>Address</h2>
+                                            <h:inputTextarea value="#{patientController.currentPatient.adress}" ></h:inputTextarea>
+                                            <h2>NIC</h2>
+                                            <h:inputText value="#{patientController.currentPatient.nic}" ></h:inputText>
+                                            <h:commandButton value="save" class="send" action="#{patientController.savePatient()}"></h:commandButton>
+                                       
+                                
                             </div>
                         </div>
                     </div>
